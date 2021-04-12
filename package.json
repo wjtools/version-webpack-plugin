@@ -1,0 +1,33 @@
+{
+  "name": "version-webpack-plugin",
+  "version": "1.0.0",
+  "description": "webpack 版本号自动更新插件",
+  "author": "Steven",
+  "license": "MIT",
+  "homepage": "https://github.com/wjtools/version-webpack-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wjtools/version-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "version-webpack-plugin",
+    "script",
+    "version"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "lint": "eslint --format=codeframe ."
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-vue-libs": "^2.1.0"
+  },
+  "peerDependencies": {
+    "webpack": "^5.20.0 || ^4.1.0"
+  }
+}
