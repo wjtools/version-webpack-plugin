@@ -1,6 +1,6 @@
 {
   "name": "@wjtools/version-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "webpack 版本号自动更新插件",
   "author": "Steven",
   "license": "MIT",
