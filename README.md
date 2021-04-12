@@ -17,19 +17,21 @@ $ yarn add version-webpack-plugin --save-dev
 
 然后将插件添加到您的 `webpack` 配置。例如：
 
-**webpack.config.js**
+**vue.config.js**
 
 ```js
-const VersionWebpackPlugin = require('version-webpack-plugin')
-
-module.exports = {
-  plugins: [
-    new VersionWebpackPlugin({
-      file: './package.json', // 指定版本号更新文件，默认：'./package.json'
-      version: '1.0.1', // 指定版本号，默认取 file 指定文件中的版本号
-    }),
-  ],
-}
+configureWebpack: config => {
+  if (isProd) {
+    // 自动更新 package.json 中的版本号
+    const VersionWebpackPlugin = require('version-webpack-plugin')
+    config.plugins.push(
+      new VersionWebpackPlugin({
+        // file: './package.json', // 指定版本号更新文件，默认：'./package.json'
+        // version: '1.0.1', // 指定版本号，默认取 file 指定文件中的版本号并递增
+      }),
+    )
+  }
+},
 ```
 
 
