@@ -1,4 +1,4 @@
-<figure align="center"><img src="https://webpack.js.org/assets/icon-square-big.svg" width="200" height="200"></figure>
+<p align="center"><img src="https://webpack.js.org/assets/icon-square-big.svg" width="200" height="200"></p>
 
 
 
