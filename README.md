@@ -2,17 +2,17 @@
 
 
 
-<h1 align="center">version-webpack-plugin</h1>
+<h1 align="center">@wjtools/version-webpack-plugin</h1>
 <p align="center">一个简易的 webpack 版本号自动更新插件</p>
 
 
 
 <h2 align="center">安装</h2>
 
-首先，您需要安装 `version-webpack-plugin`:
+首先，您需要安装 `@wjtools/version-webpack-plugin`:
 
 ```console
-$ yarn add version-webpack-plugin --save-dev
+$ yarn add @wjtools/version-webpack-plugin --save-dev
 ```
 
 然后将插件添加到您的 `webpack` 配置。例如：
@@ -23,7 +23,7 @@ $ yarn add version-webpack-plugin --save-dev
 configureWebpack: config => {
   if (isProd) {
     // 自动更新 package.json 中的版本号
-    const VersionWebpackPlugin = require('version-webpack-plugin')
+    const VersionWebpackPlugin = require('@wjtools/version-webpack-plugin')
     config.plugins.push(
       new VersionWebpackPlugin({
         // file: './package.json', // 指定版本号更新文件，默认：'./package.json'
