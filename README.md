@@ -26,8 +26,8 @@ configureWebpack: config => {
     const VersionWebpackPlugin = require('@wjtools/version-webpack-plugin')
     config.plugins.push(
       new VersionWebpackPlugin({
-        // file: './package.json', // 指定版本号更新文件，默认：'./package.json'
-        // version: '1.0.1', // 指定版本号，默认取 file 指定文件中的版本号并递增
+        // file: 'package.json', // 指定版本号所在文件，默认：'package.json'
+        // version: '1.0.0', // 指定版本号，默认取 file 指定文件中的版本号并递增
       }),
     )
   }

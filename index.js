@@ -2,15 +2,13 @@
 
 const fs = require('fs')
 const path = require('path')
-const pathJoin = dir => path.join(__dirname, dir)
 const ID = 'version-webpack-plugin'
 
 class VersionWebpackPlugin {
   constructor(options = {}) {
-    // console.log('VersionWebpackPlugin', options)
     this.options = {
-      // version: '', // 版本号
-      file: './package.json', // 默认版本文件
+      // version: '1.0.0', // 指定版本号
+      file: 'package.json', // 版本号所在文件
       ...options,
     }
   }
@@ -19,7 +17,7 @@ class VersionWebpackPlugin {
     const hook = () => {
       try {
         const opts = this.options
-        const pkgPath = pathJoin(opts.file)
+        const pkgPath = path.resolve(opts.file)
         const pkg = require(pkgPath)
         pkg.version = opts.version || pkg.version.replace(/\d+$/, v => ++v)
         fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
