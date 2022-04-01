@@ -1,6 +1,6 @@
 {
   "name": "@wjtools/version-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "webpack 版本号自动更新插件",
   "author": "Steven",
   "license": "MIT",
@@ -29,5 +29,9 @@
   },
   "peerDependencies": {
     "webpack": "^5.20.0 || ^4.1.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/",
+    "access": "public"
   }
 }

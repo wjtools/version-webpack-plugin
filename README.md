@@ -27,7 +27,8 @@ configureWebpack: config => {
     config.plugins.push(
       new VersionWebpackPlugin({
         // file: 'package.json', // 指定版本号所在文件，默认：'package.json'
-        // version: '1.0.0', // 指定版本号，默认取 file 指定文件中的版本号并递增
+        // version: '1.0.0', // 指定版本号，默认取 file 指定文件中的版本号
+        // mode: 'increment', // 更新模式：increment-递增（默认）；timestamp-时间戳
       }),
     )
   }
